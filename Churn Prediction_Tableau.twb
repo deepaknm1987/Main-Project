@@ -1,0 +1,1326 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 10400.17.0915.2112                               -->
+<workbook original-version='10.4' source-build='10.4.0 (10400.17.0915.2112)' source-platform='win' version='10.4' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource hasconnection='false' inline='true' name='Parameters' version='10.4'>
+      <aliases enabled='yes' />
+      <column caption='Threshold' datatype='real' name='[Churn Parameter]' param-domain-type='range' role='measure' type='quantitative' value='0.66033016508254139'>
+        <calculation class='tableau' formula='0.66033016508254139' />
+        <range max='1.0' min='0.0' />
+      </column>
+    </datasource>
+    <datasource caption='churn (Churn)' inline='true' name='federated.1pb1t4k1ys3y4c18uniri1nli11r' version='10.4'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='Churn' name='excel-direct.1ew1jsw1xo6zf7186ryeu0s97vy7'>
+            <connection class='excel-direct' cleaning='no' compat='no' dataRefreshTime='' filename='C:/Users/acer/Documents/Churn.xls' interpretationMode='0' password='' server='' validate='no' />
+          </named-connection>
+        </named-connections>
+        <relation connection='excel-direct.1ew1jsw1xo6zf7186ryeu0s97vy7' name='churn' table='[churn$]' type='table'>
+          <columns gridOrigin='A1:U3334:no:A1:U3334:0' header='yes' outcome='6'>
+            <column datatype='integer' name='Account Length' ordinal='0' />
+            <column datatype='integer' name='VMail Message' ordinal='1' />
+            <column datatype='real' name='Day Mins' ordinal='2' />
+            <column datatype='real' name='Eve Mins' ordinal='3' />
+            <column datatype='real' name='Night Mins' ordinal='4' />
+            <column datatype='real' name='Intl Mins' ordinal='5' />
+            <column datatype='integer' name='CustServ Calls' ordinal='6' />
+            <column datatype='integer' name='Churn' ordinal='7' />
+            <column datatype='integer' name='Int&apos;l Plan' ordinal='8' />
+            <column datatype='integer' name='VMail Plan' ordinal='9' />
+            <column datatype='integer' name='Day Calls' ordinal='10' />
+            <column datatype='real' name='Day Charge' ordinal='11' />
+            <column datatype='integer' name='Eve Calls' ordinal='12' />
+            <column datatype='real' name='Eve Charge' ordinal='13' />
+            <column datatype='integer' name='Night Calls' ordinal='14' />
+            <column datatype='real' name='Night Charge' ordinal='15' />
+            <column datatype='integer' name='Intl Calls' ordinal='16' />
+            <column datatype='real' name='Intl Charge' ordinal='17' />
+            <column datatype='string' name='State' ordinal='18' />
+            <column datatype='integer' name='Area Code' ordinal='19' />
+            <column datatype='string' name='Phone' ordinal='20' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='column'>
+            <remote-name>Account Length</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Account Length]</local-name>
+            <parent-name>[churn]</parent-name>
+            <remote-alias>Account Length</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>VMail Message</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[VMail Message]</local-name>
+            <parent-name>[churn]</parent-name>
+            <remote-alias>VMail Message</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Day Mins</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Day Mins]</local-name>
+            <parent-name>[churn]</parent-name>
+            <remote-alias>Day Mins</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Eve Mins</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Eve Mins]</local-name>
+            <parent-name>[churn]</parent-name>
+            <remote-alias>Eve Mins</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Night Mins</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Night Mins]</local-name>
+            <parent-name>[churn]</parent-name>
+            <remote-alias>Night Mins</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Intl Mins</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Intl Mins]</local-name>
+            <parent-name>[churn]</parent-name>
+            <remote-alias>Intl Mins</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>CustServ Calls</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[CustServ Calls]</local-name>
+            <parent-name>[churn]</parent-name>
+            <remote-alias>CustServ Calls</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Churn</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Churn]</local-name>
+            <parent-name>[churn]</parent-name>
+            <remote-alias>Churn</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Int&apos;l Plan</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Int&apos;l Plan]</local-name>
+            <parent-name>[churn]</parent-name>
+            <remote-alias>Int&apos;l Plan</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>VMail Plan</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[VMail Plan]</local-name>
+            <parent-name>[churn]</parent-name>
+            <remote-alias>VMail Plan</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Day Calls</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Day Calls]</local-name>
+            <parent-name>[churn]</parent-name>
+            <remote-alias>Day Calls</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Day Charge</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Day Charge]</local-name>
+            <parent-name>[churn]</parent-name>
+            <remote-alias>Day Charge</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Eve Calls</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Eve Calls]</local-name>
+            <parent-name>[churn]</parent-name>
+            <remote-alias>Eve Calls</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Eve Charge</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Eve Charge]</local-name>
+            <parent-name>[churn]</parent-name>
+            <remote-alias>Eve Charge</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Night Calls</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Night Calls]</local-name>
+            <parent-name>[churn]</parent-name>
+            <remote-alias>Night Calls</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Night Charge</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Night Charge]</local-name>
+            <parent-name>[churn]</parent-name>
+            <remote-alias>Night Charge</remote-alias>
+            <ordinal>15</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Intl Calls</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Intl Calls]</local-name>
+            <parent-name>[churn]</parent-name>
+            <remote-alias>Intl Calls</remote-alias>
+            <ordinal>16</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Intl Charge</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Intl Charge]</local-name>
+            <parent-name>[churn]</parent-name>
+            <remote-alias>Intl Charge</remote-alias>
+            <ordinal>17</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>State</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[State]</local-name>
+            <parent-name>[churn]</parent-name>
+            <remote-alias>State</remote-alias>
+            <ordinal>18</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RIN_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Area Code</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Area Code]</local-name>
+            <parent-name>[churn]</parent-name>
+            <remote-alias>Area Code</remote-alias>
+            <ordinal>19</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Phone</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Phone]</local-name>
+            <parent-name>[churn]</parent-name>
+            <remote-alias>Phone</remote-alias>
+            <ordinal>20</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RIN_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[churn]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='context'>0</attribute>
+              <attribute datatype='string' name='gridOrigin'>&quot;A1:U3334:no:A1:U3334:0&quot;</attribute>
+              <attribute datatype='boolean' name='header'>true</attribute>
+              <attribute datatype='integer' name='outcome'>6</attribute>
+            </attributes>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column datatype='integer' default-format='*000' name='[Area Code]' role='dimension' semantic-role='[AreaCode].[Name]' type='ordinal' />
+      <column caption='Model' datatype='real' name='[Calculation_449234128796016641]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='SCRIPT_REAL(&apos; &#13;&#10;&#13;&#10;&#13;&#10;Data&lt;- data.frame(acclen&lt;-.arg1,vmailmsg&lt;-.arg2,daymins&lt;-.arg3,evemins&lt;-.arg4,nightmins&lt;-.arg5,intlmins&lt;-.arg6,&#13;&#10;                  custservcalls&lt;-.arg7,churn&lt;-.arg8,intlplan&lt;-.arg9,vmailplan&lt;-.arg10,daycalls&lt;-.arg11,daycharge&lt;-.arg12,&#13;&#10;                   evecalls&lt;-.arg13,evecharge&lt;-.arg14,nightcalls&lt;-.arg15,nightcharge&lt;-.arg16,intlcharge&lt;-.arg17);&#13;&#10;&#13;&#10;&#13;&#10;Model&lt;-glm(churn ~ ., data = Data, family = &quot;binomial&quot;)&#13;&#10;&#13;&#10;&#13;&#10;pred&lt;-predict(Model, newdata = Data, type = &quot;response&quot;)&#13;&#10;&#13;&#10;&#13;&#10;&#13;&#10;&apos;&#13;&#10;,&#13;&#10;&#13;&#10;AVG([Account Length]),AVG([VMail Message]),AVG([Day Mins]),AVG([Eve Mins]),AVG([Night Mins]),AVG([Intl Mins]),&#13;&#10;AVG([CustServ Calls]),AVG([Churn]),AVG([Int&apos;l Plan]),AVG([VMail Plan]),AVG([Day Calls]),AVG([Day Charge]),&#13;&#10;AVG([Eve Calls]),AVG([Eve Charge]),AVG([Night Calls]),AVG([Night Charge]),AVG([Intl Charge])&#13;&#10;&#13;&#10;)'>
+          <table-calc ordering-type='Rows' />
+        </calculation>
+      </column>
+      <column caption='0&amp;1' datatype='integer' name='[Calculation_449234128811597826]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='IF [Calculation_449234128796016641]&gt;[Parameters].[Churn Parameter]THEN 1 ELSE 0  END'>
+          <table-calc ordering-type='Rows' />
+        </calculation>
+      </column>
+      <column caption='Accuracy' datatype='real' name='[Calculation_449234128811958275]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='SCRIPT_REAL(&apos;&#13;&#10;library(&quot;caret&quot;)&#13;&#10;&#13;&#10;actual&lt;-c(.arg1)&#13;&#10;predicted&lt;-c(.arg2)&#13;&#10;&#13;&#10;u&lt;-union(actual,predicted)&#13;&#10;&#13;&#10;tab&lt;- table(factor(actual,u),factor(predicted,u))&#13;&#10;&#13;&#10;c&lt;-confusionMatrix(tab)&#13;&#10;&#13;&#10;c$overall[&quot;Accuracy&quot;]&#13;&#10;&#13;&#10;&apos;&#13;&#10;,&#13;&#10;SUM([Churn]),[Calculation_449234128811597826]&#13;&#10;&#13;&#10;)'>
+          <table-calc ordering-type='Rows' />
+        </calculation>
+      </column>
+      <column caption='Accuracy(Final_model)' datatype='real' name='[Calculation_449234128901353477]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='SCRIPT_REAL(&#13;&#10;&apos;&#13;&#10;&#13;&#10;library(&quot;caret&quot;)&#13;&#10;&#13;&#10;p&lt;- (.arg1)&#13;&#10;&#13;&#10;prd &lt;- ifelse(p&gt;.arg2,1,0)&#13;&#10;&#13;&#10;cm&lt;-confusionMatrix(.arg3,prd)&#13;&#10;&#13;&#10;cm$overall[&quot;Accuracy&quot;]&apos;,&#13;&#10;&#13;&#10;&#13;&#10;[Calculation_449234128908615686],[Parameters].[Churn Parameter],AVG([Churn])&#13;&#10;&#13;&#10;)'>
+          <table-calc ordering-type='Rows' />
+        </calculation>
+      </column>
+      <column caption='Final_model(Predicted churn)' datatype='real' name='[Calculation_449234128908615686]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='SCRIPT_REAL(&apos;&#13;&#10;&#13;&#10;fmodel&lt;- glm(.arg1 ~ .arg2 + .arg3+ .arg4+ .arg5+ .arg6+ .arg7+ .arg8+ .arg9+ .arg10+ .arg11, family = &quot;binomial&quot;)&#13;&#10;&#13;&#10;f&lt;-fitted(fmodel)&#13;&#10;&#13;&#10;ifelse(f&gt;.arg12,1,0)&#13;&#10;&#13;&#10;&#13;&#10;&#13;&#10;&apos;,&#13;&#10;&#13;&#10;SUM([Churn]),AVG([Int&apos;l Plan]),AVG([Day Mins]),AVG([CustServ Calls]),SUM([VMail Plan]), AVG([Eve Charge]),&#13;&#10;SUM([Intl Charge]),SUM([Intl Calls]),SUM([Night Mins]),SUM([Intl Mins]),SUM([VMail Message]),&#13;&#10;[Parameters].[Churn Parameter]&#13;&#10;&#13;&#10;)'>
+          <table-calc ordering-type='Rows' />
+        </calculation>
+      </column>
+      <column datatype='integer' name='[Day Calls]' role='dimension' type='quantitative' />
+      <column datatype='real' name='[Day Charge]' role='dimension' type='quantitative' />
+      <column datatype='real' name='[Day Mins]' role='dimension' type='quantitative' />
+      <column datatype='string' name='[State]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
+      <folder name='R_script' role='measures'>
+        <folder-item name='[Calculation_449234128796016641]' type='field' />
+        <folder-item name='[Calculation_449234128811597826]' type='field' />
+        <folder-item name='[Calculation_449234128811958275]' type='field' />
+        <folder-item name='[Calculation_449234128901353477]' type='field' />
+        <folder-item name='[Calculation_449234128908615686]' type='field' />
+      </folder>
+      <layout dim-ordering='alphabetic' dim-percentage='0.303901' measure-ordering='alphabetic' measure-percentage='0.648871' parameter-percentage='0.0472279' show-structure='false' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;India&quot;' />
+      </semantic-values>
+      <datasource-dependencies datasource='Parameters'>
+        <column caption='Threshold' datatype='real' name='[Churn Parameter]' param-domain-type='range' role='measure' type='quantitative' value='0.66033016508254139'>
+          <calculation class='tableau' formula='0.66033016508254139' />
+          <range max='1.0' min='0.0' />
+        </column>
+      </datasource-dependencies>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Odds'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='churn (Churn)' name='federated.1pb1t4k1ys3y4c18uniri1nli11r' />
+            <datasource name='Parameters' />
+          </datasources>
+          <datasource-dependencies datasource='Parameters'>
+            <column caption='Threshold' datatype='real' name='[Churn Parameter]' param-domain-type='range' role='measure' type='quantitative' value='0.66033016508254139'>
+              <calculation class='tableau' formula='0.66033016508254139' />
+              <range max='1.0' min='0.0' />
+            </column>
+          </datasource-dependencies>
+          <datasource-dependencies datasource='federated.1pb1t4k1ys3y4c18uniri1nli11r'>
+            <column datatype='integer' name='[Account Length]' role='measure' type='quantitative' />
+            <column caption='Model' datatype='real' name='[Calculation_449234128796016641]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='SCRIPT_REAL(&apos; &#13;&#10;&#13;&#10;&#13;&#10;Data&lt;- data.frame(acclen&lt;-.arg1,vmailmsg&lt;-.arg2,daymins&lt;-.arg3,evemins&lt;-.arg4,nightmins&lt;-.arg5,intlmins&lt;-.arg6,&#13;&#10;                  custservcalls&lt;-.arg7,churn&lt;-.arg8,intlplan&lt;-.arg9,vmailplan&lt;-.arg10,daycalls&lt;-.arg11,daycharge&lt;-.arg12,&#13;&#10;                   evecalls&lt;-.arg13,evecharge&lt;-.arg14,nightcalls&lt;-.arg15,nightcharge&lt;-.arg16,intlcharge&lt;-.arg17);&#13;&#10;&#13;&#10;&#13;&#10;Model&lt;-glm(churn ~ ., data = Data, family = &quot;binomial&quot;)&#13;&#10;&#13;&#10;&#13;&#10;pred&lt;-predict(Model, newdata = Data, type = &quot;response&quot;)&#13;&#10;&#13;&#10;&#13;&#10;&#13;&#10;&apos;&#13;&#10;,&#13;&#10;&#13;&#10;AVG([Account Length]),AVG([VMail Message]),AVG([Day Mins]),AVG([Eve Mins]),AVG([Night Mins]),AVG([Intl Mins]),&#13;&#10;AVG([CustServ Calls]),AVG([Churn]),AVG([Int&apos;l Plan]),AVG([VMail Plan]),AVG([Day Calls]),AVG([Day Charge]),&#13;&#10;AVG([Eve Calls]),AVG([Eve Charge]),AVG([Night Calls]),AVG([Night Charge]),AVG([Intl Charge])&#13;&#10;&#13;&#10;)'>
+                <table-calc ordering-type='Rows' />
+              </calculation>
+            </column>
+            <column caption='0&amp;1' datatype='integer' name='[Calculation_449234128811597826]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='IF [Calculation_449234128796016641]&gt;[Parameters].[Churn Parameter]THEN 1 ELSE 0  END'>
+                <table-calc ordering-type='Rows' />
+              </calculation>
+            </column>
+            <column caption='Accuracy' datatype='real' name='[Calculation_449234128811958275]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='SCRIPT_REAL(&apos;&#13;&#10;library(&quot;caret&quot;)&#13;&#10;&#13;&#10;actual&lt;-c(.arg1)&#13;&#10;predicted&lt;-c(.arg2)&#13;&#10;&#13;&#10;u&lt;-union(actual,predicted)&#13;&#10;&#13;&#10;tab&lt;- table(factor(actual,u),factor(predicted,u))&#13;&#10;&#13;&#10;c&lt;-confusionMatrix(tab)&#13;&#10;&#13;&#10;c$overall[&quot;Accuracy&quot;]&#13;&#10;&#13;&#10;&apos;&#13;&#10;,&#13;&#10;SUM([Churn]),[Calculation_449234128811597826]&#13;&#10;&#13;&#10;)'>
+                <table-calc ordering-type='Rows' />
+              </calculation>
+            </column>
+            <column datatype='integer' name='[Churn]' role='measure' type='quantitative' />
+            <column datatype='integer' name='[CustServ Calls]' role='measure' type='quantitative' />
+            <column datatype='integer' name='[Day Calls]' role='dimension' type='quantitative' />
+            <column datatype='real' name='[Day Charge]' role='dimension' type='quantitative' />
+            <column datatype='real' name='[Day Mins]' role='dimension' type='quantitative' />
+            <column datatype='integer' name='[Eve Calls]' role='measure' type='quantitative' />
+            <column datatype='real' name='[Eve Charge]' role='measure' type='quantitative' />
+            <column datatype='real' name='[Eve Mins]' role='measure' type='quantitative' />
+            <column datatype='integer' name='[Int&apos;l Plan]' role='measure' type='quantitative' />
+            <column datatype='integer' name='[Intl Calls]' role='measure' type='quantitative' />
+            <column datatype='real' name='[Intl Charge]' role='measure' type='quantitative' />
+            <column datatype='real' name='[Intl Mins]' role='measure' type='quantitative' />
+            <column datatype='integer' name='[Night Calls]' role='measure' type='quantitative' />
+            <column datatype='real' name='[Night Charge]' role='measure' type='quantitative' />
+            <column datatype='real' name='[Night Mins]' role='measure' type='quantitative' />
+            <column datatype='integer' name='[VMail Message]' role='measure' type='quantitative' />
+            <column datatype='integer' name='[VMail Plan]' role='measure' type='quantitative' />
+            <column-instance column='[Account Length]' derivation='None' name='[none:Account Length:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[CustServ Calls]' derivation='None' name='[none:CustServ Calls:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Day Calls]' derivation='None' name='[none:Day Calls:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Day Charge]' derivation='None' name='[none:Day Charge:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Day Mins]' derivation='None' name='[none:Day Mins:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Eve Calls]' derivation='None' name='[none:Eve Calls:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Eve Charge]' derivation='None' name='[none:Eve Charge:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Eve Mins]' derivation='None' name='[none:Eve Mins:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Int&apos;l Plan]' derivation='None' name='[none:Int&apos;l Plan:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Intl Calls]' derivation='None' name='[none:Intl Calls:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Intl Charge]' derivation='None' name='[none:Intl Charge:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Intl Mins]' derivation='None' name='[none:Intl Mins:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Night Calls]' derivation='None' name='[none:Night Calls:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Night Charge]' derivation='None' name='[none:Night Charge:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Night Mins]' derivation='None' name='[none:Night Mins:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[VMail Message]' derivation='None' name='[none:VMail Message:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[VMail Plan]' derivation='None' name='[none:VMail Plan:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Account Length]' derivation='Sum' name='[sum:Account Length:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Churn]' derivation='Sum' name='[sum:Churn:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[CustServ Calls]' derivation='Sum' name='[sum:CustServ Calls:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Eve Calls]' derivation='Sum' name='[sum:Eve Calls:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Eve Charge]' derivation='Sum' name='[sum:Eve Charge:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Eve Mins]' derivation='Sum' name='[sum:Eve Mins:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Int&apos;l Plan]' derivation='Sum' name='[sum:Int&apos;l Plan:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Intl Calls]' derivation='Sum' name='[sum:Intl Calls:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Intl Charge]' derivation='Sum' name='[sum:Intl Charge:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Intl Mins]' derivation='Sum' name='[sum:Intl Mins:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Night Calls]' derivation='Sum' name='[sum:Night Calls:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Night Charge]' derivation='Sum' name='[sum:Night Charge:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Night Mins]' derivation='Sum' name='[sum:Night Mins:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[VMail Message]' derivation='Sum' name='[sum:VMail Message:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[VMail Plan]' derivation='Sum' name='[sum:VMail Plan:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_449234128796016641]' derivation='User' name='[usr:Calculation_449234128796016641:qk]' pivot='key' type='quantitative'>
+              <table-calc ordering-type='Rows' />
+            </column-instance>
+            <column-instance column='[Calculation_449234128811958275]' derivation='User' name='[usr:Calculation_449234128811958275:qk]' pivot='key' type='quantitative'>
+              <table-calc ordering-type='Rows' />
+              <table-calc field='[federated.1pb1t4k1ys3y4c18uniri1nli11r].[Calculation_449234128796016641]' ordering-type='Rows' />
+              <table-calc field='[federated.1pb1t4k1ys3y4c18uniri1nli11r].[Calculation_449234128811597826]' ordering-type='Rows' />
+            </column-instance>
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1pb1t4k1ys3y4c18uniri1nli11r].[:Measure Names]'>
+            <groupfilter function='union' user:op='manual'>
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.1pb1t4k1ys3y4c18uniri1nli11r].[sum:Account Length:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.1pb1t4k1ys3y4c18uniri1nli11r].[sum:Churn:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.1pb1t4k1ys3y4c18uniri1nli11r].[sum:CustServ Calls:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.1pb1t4k1ys3y4c18uniri1nli11r].[sum:Eve Calls:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.1pb1t4k1ys3y4c18uniri1nli11r].[sum:Eve Charge:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.1pb1t4k1ys3y4c18uniri1nli11r].[sum:Eve Mins:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.1pb1t4k1ys3y4c18uniri1nli11r].[sum:Int&apos;l Plan:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.1pb1t4k1ys3y4c18uniri1nli11r].[sum:Intl Calls:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.1pb1t4k1ys3y4c18uniri1nli11r].[sum:Intl Charge:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.1pb1t4k1ys3y4c18uniri1nli11r].[sum:Intl Mins:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.1pb1t4k1ys3y4c18uniri1nli11r].[sum:Night Calls:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.1pb1t4k1ys3y4c18uniri1nli11r].[sum:Night Charge:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.1pb1t4k1ys3y4c18uniri1nli11r].[sum:Night Mins:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.1pb1t4k1ys3y4c18uniri1nli11r].[sum:VMail Message:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.1pb1t4k1ys3y4c18uniri1nli11r].[sum:VMail Plan:qk]&quot;' />
+            </groupfilter>
+          </filter>
+          <filter class='quantitative' column='[federated.1pb1t4k1ys3y4c18uniri1nli11r].[none:Account Length:qk]' included-values='in-range'>
+            <min>1</min>
+            <max>107</max>
+          </filter>
+          <filter class='quantitative' column='[federated.1pb1t4k1ys3y4c18uniri1nli11r].[none:CustServ Calls:qk]' included-values='in-range'>
+            <min>0</min>
+            <max>9</max>
+          </filter>
+          <filter class='quantitative' column='[federated.1pb1t4k1ys3y4c18uniri1nli11r].[none:Day Calls:qk]' included-values='in-range'>
+            <min>0</min>
+            <max>165</max>
+          </filter>
+          <filter class='quantitative' column='[federated.1pb1t4k1ys3y4c18uniri1nli11r].[none:Day Charge:qk]' included-values='in-range'>
+            <min>0.0</min>
+            <max>59.640000000000001</max>
+          </filter>
+          <filter class='quantitative' column='[federated.1pb1t4k1ys3y4c18uniri1nli11r].[none:Day Mins:qk]' included-values='in-range'>
+            <min>0.0</min>
+            <max>196.0</max>
+          </filter>
+          <filter class='quantitative' column='[federated.1pb1t4k1ys3y4c18uniri1nli11r].[none:Eve Calls:qk]' included-values='in-range'>
+            <min>0</min>
+            <max>170</max>
+          </filter>
+          <filter class='quantitative' column='[federated.1pb1t4k1ys3y4c18uniri1nli11r].[none:Eve Charge:qk]' included-values='in-range'>
+            <min>0.0</min>
+            <max>30.91</max>
+          </filter>
+          <filter class='quantitative' column='[federated.1pb1t4k1ys3y4c18uniri1nli11r].[none:Eve Mins:qk]' included-values='in-range'>
+            <min>0.0</min>
+            <max>139.0</max>
+          </filter>
+          <filter class='quantitative' column='[federated.1pb1t4k1ys3y4c18uniri1nli11r].[none:Int&apos;l Plan:qk]' included-values='in-range'>
+            <min>0</min>
+            <max>0</max>
+          </filter>
+          <filter class='quantitative' column='[federated.1pb1t4k1ys3y4c18uniri1nli11r].[none:Intl Calls:qk]' included-values='in-range'>
+            <min>0</min>
+            <max>20</max>
+          </filter>
+          <filter class='quantitative' column='[federated.1pb1t4k1ys3y4c18uniri1nli11r].[none:Intl Charge:qk]' included-values='in-range'>
+            <min>0.23000000000000001</min>
+            <max>5.4000000000000004</max>
+          </filter>
+          <filter class='quantitative' column='[federated.1pb1t4k1ys3y4c18uniri1nli11r].[none:Intl Mins:qk]' included-values='in-range'>
+            <min>0.0</min>
+            <max>20.0</max>
+          </filter>
+          <filter class='quantitative' column='[federated.1pb1t4k1ys3y4c18uniri1nli11r].[none:Night Calls:qk]' included-values='in-range'>
+            <min>33</min>
+            <max>175</max>
+          </filter>
+          <filter class='quantitative' column='[federated.1pb1t4k1ys3y4c18uniri1nli11r].[none:Night Charge:qk]' included-values='in-range'>
+            <min>1.04</min>
+            <max>17.77</max>
+          </filter>
+          <filter class='quantitative' column='[federated.1pb1t4k1ys3y4c18uniri1nli11r].[none:Night Mins:qk]' included-values='in-range'>
+            <min>23.199999999999999</min>
+            <max>395.0</max>
+          </filter>
+          <filter class='quantitative' column='[federated.1pb1t4k1ys3y4c18uniri1nli11r].[none:VMail Message:qk]' included-values='in-range'>
+            <min>0</min>
+            <max>51</max>
+          </filter>
+          <filter class='quantitative' column='[federated.1pb1t4k1ys3y4c18uniri1nli11r].[none:VMail Plan:qk]' included-values='in-range'>
+            <min>0</min>
+            <max>1</max>
+          </filter>
+          <slices>
+            <column>[federated.1pb1t4k1ys3y4c18uniri1nli11r].[none:Account Length:qk]</column>
+            <column>[federated.1pb1t4k1ys3y4c18uniri1nli11r].[none:CustServ Calls:qk]</column>
+            <column>[federated.1pb1t4k1ys3y4c18uniri1nli11r].[none:Day Calls:qk]</column>
+            <column>[federated.1pb1t4k1ys3y4c18uniri1nli11r].[none:Day Mins:qk]</column>
+            <column>[federated.1pb1t4k1ys3y4c18uniri1nli11r].[none:Day Charge:qk]</column>
+            <column>[federated.1pb1t4k1ys3y4c18uniri1nli11r].[none:Eve Calls:qk]</column>
+            <column>[federated.1pb1t4k1ys3y4c18uniri1nli11r].[none:Eve Charge:qk]</column>
+            <column>[federated.1pb1t4k1ys3y4c18uniri1nli11r].[none:Eve Mins:qk]</column>
+            <column>[federated.1pb1t4k1ys3y4c18uniri1nli11r].[none:Int&apos;l Plan:qk]</column>
+            <column>[federated.1pb1t4k1ys3y4c18uniri1nli11r].[none:Intl Calls:qk]</column>
+            <column>[federated.1pb1t4k1ys3y4c18uniri1nli11r].[none:Intl Charge:qk]</column>
+            <column>[federated.1pb1t4k1ys3y4c18uniri1nli11r].[none:Intl Mins:qk]</column>
+            <column>[federated.1pb1t4k1ys3y4c18uniri1nli11r].[none:Night Calls:qk]</column>
+            <column>[federated.1pb1t4k1ys3y4c18uniri1nli11r].[none:Night Charge:qk]</column>
+            <column>[federated.1pb1t4k1ys3y4c18uniri1nli11r].[none:Night Mins:qk]</column>
+            <column>[federated.1pb1t4k1ys3y4c18uniri1nli11r].[none:VMail Message:qk]</column>
+            <column>[federated.1pb1t4k1ys3y4c18uniri1nli11r].[none:VMail Plan:qk]</column>
+            <column>[federated.1pb1t4k1ys3y4c18uniri1nli11r].[:Measure Names]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='mark'>
+            <encoding attr='color' field='[federated.1pb1t4k1ys3y4c18uniri1nli11r].[Multiple Values]' palette='blue_10_0' type='interpolated' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane id='6' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-color' value='#8cd17d' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='8' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.1pb1t4k1ys3y4c18uniri1nli11r].[Multiple Values]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-color' value='#8cd17d' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='9' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.1pb1t4k1ys3y4c18uniri1nli11r].[usr:Calculation_449234128796016641:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-color' value='#8cd17d' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='10' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.1pb1t4k1ys3y4c18uniri1nli11r].[usr:Calculation_449234128811958275:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Circle' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-color' value='#8cd17d' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>([federated.1pb1t4k1ys3y4c18uniri1nli11r].[usr:Calculation_449234128811958275:qk] + ([federated.1pb1t4k1ys3y4c18uniri1nli11r].[usr:Calculation_449234128796016641:qk] + [federated.1pb1t4k1ys3y4c18uniri1nli11r].[Multiple Values]))</rows>
+        <cols>[federated.1pb1t4k1ys3y4c18uniri1nli11r].[:Measure Names]</cols>
+      </table>
+    </worksheet>
+    <worksheet name='Tabular Viz'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='churn (Churn)' name='federated.1pb1t4k1ys3y4c18uniri1nli11r' />
+            <datasource name='Parameters' />
+          </datasources>
+          <datasource-dependencies datasource='Parameters'>
+            <column caption='Threshold' datatype='real' name='[Churn Parameter]' param-domain-type='range' role='measure' type='quantitative' value='0.66033016508254139'>
+              <calculation class='tableau' formula='0.66033016508254139' />
+              <range max='1.0' min='0.0' />
+            </column>
+          </datasource-dependencies>
+          <datasource-dependencies datasource='federated.1pb1t4k1ys3y4c18uniri1nli11r'>
+            <column caption='Accuracy(Final_model)' datatype='real' name='[Calculation_449234128901353477]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='SCRIPT_REAL(&#13;&#10;&apos;&#13;&#10;&#13;&#10;library(&quot;caret&quot;)&#13;&#10;&#13;&#10;p&lt;- (.arg1)&#13;&#10;&#13;&#10;prd &lt;- ifelse(p&gt;.arg2,1,0)&#13;&#10;&#13;&#10;cm&lt;-confusionMatrix(.arg3,prd)&#13;&#10;&#13;&#10;cm$overall[&quot;Accuracy&quot;]&apos;,&#13;&#10;&#13;&#10;&#13;&#10;[Calculation_449234128908615686],[Parameters].[Churn Parameter],AVG([Churn])&#13;&#10;&#13;&#10;)'>
+                <table-calc ordering-type='Rows' />
+              </calculation>
+            </column>
+            <column caption='Final_model(Predicted churn)' datatype='real' name='[Calculation_449234128908615686]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='SCRIPT_REAL(&apos;&#13;&#10;&#13;&#10;fmodel&lt;- glm(.arg1 ~ .arg2 + .arg3+ .arg4+ .arg5+ .arg6+ .arg7+ .arg8+ .arg9+ .arg10+ .arg11, family = &quot;binomial&quot;)&#13;&#10;&#13;&#10;f&lt;-fitted(fmodel)&#13;&#10;&#13;&#10;ifelse(f&gt;.arg12,1,0)&#13;&#10;&#13;&#10;&#13;&#10;&#13;&#10;&apos;,&#13;&#10;&#13;&#10;SUM([Churn]),AVG([Int&apos;l Plan]),AVG([Day Mins]),AVG([CustServ Calls]),SUM([VMail Plan]), AVG([Eve Charge]),&#13;&#10;SUM([Intl Charge]),SUM([Intl Calls]),SUM([Night Mins]),SUM([Intl Mins]),SUM([VMail Message]),&#13;&#10;[Parameters].[Churn Parameter]&#13;&#10;&#13;&#10;)'>
+                <table-calc ordering-type='Rows' />
+              </calculation>
+            </column>
+            <column datatype='integer' name='[Churn]' role='measure' type='quantitative' />
+            <column datatype='integer' name='[CustServ Calls]' role='measure' type='quantitative' />
+            <column datatype='real' name='[Day Mins]' role='dimension' type='quantitative' />
+            <column datatype='real' name='[Eve Charge]' role='measure' type='quantitative' />
+            <column datatype='integer' name='[Int&apos;l Plan]' role='measure' type='quantitative' />
+            <column datatype='integer' name='[Intl Calls]' role='measure' type='quantitative' />
+            <column datatype='real' name='[Intl Charge]' role='measure' type='quantitative' />
+            <column datatype='real' name='[Intl Mins]' role='measure' type='quantitative' />
+            <column datatype='real' name='[Night Mins]' role='measure' type='quantitative' />
+            <column datatype='string' name='[Phone]' role='dimension' type='nominal' />
+            <column datatype='integer' name='[VMail Message]' role='measure' type='quantitative' />
+            <column datatype='integer' name='[VMail Plan]' role='measure' type='quantitative' />
+            <column-instance column='[Phone]' derivation='None' name='[none:Phone:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Churn]' derivation='Sum' name='[sum:Churn:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_449234128901353477]' derivation='User' name='[usr:Calculation_449234128901353477:qk:4]' pivot='key' type='quantitative'>
+              <table-calc ordering-type='Columns' />
+              <table-calc field='[federated.1pb1t4k1ys3y4c18uniri1nli11r].[Calculation_449234128908615686]' ordering-type='Columns' />
+            </column-instance>
+            <column-instance column='[Calculation_449234128908615686]' derivation='User' name='[usr:Calculation_449234128908615686:qk:1]' pivot='key' type='quantitative'>
+              <table-calc ordering-type='Columns' />
+            </column-instance>
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1pb1t4k1ys3y4c18uniri1nli11r].[:Measure Names]'>
+            <groupfilter function='union' user:op='manual'>
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.1pb1t4k1ys3y4c18uniri1nli11r].[sum:Churn:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.1pb1t4k1ys3y4c18uniri1nli11r].[usr:Calculation_449234128908615686:qk:1]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.1pb1t4k1ys3y4c18uniri1nli11r].[usr:Calculation_449234128901353477:qk:4]&quot;' />
+            </groupfilter>
+          </filter>
+          <sort class='manual' column='[federated.1pb1t4k1ys3y4c18uniri1nli11r].[:Measure Names]' direction='ASC'>
+            <dictionary>
+              <bucket>&quot;[federated.1pb1t4k1ys3y4c18uniri1nli11r].[sum:Churn:qk]&quot;</bucket>
+              <bucket>&quot;[federated.1pb1t4k1ys3y4c18uniri1nli11r].[usr:Calculation_449234128908615686:qk:1]&quot;</bucket>
+              <bucket>&quot;[federated.1pb1t4k1ys3y4c18uniri1nli11r].[usr:Calculation_449234128901353477:qk:4]&quot;</bucket>
+            </dictionary>
+          </sort>
+          <slices>
+            <column>[federated.1pb1t4k1ys3y4c18uniri1nli11r].[:Measure Names]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='width' field='[federated.1pb1t4k1ys3y4c18uniri1nli11r].[:Measure Names]' value='178' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.1pb1t4k1ys3y4c18uniri1nli11r].[Multiple Values]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1pb1t4k1ys3y4c18uniri1nli11r].[none:Phone:nk]</rows>
+        <cols>[federated.1pb1t4k1ys3y4c18uniri1nli11r].[:Measure Names]</cols>
+      </table>
+    </worksheet>
+  </worksheets>
+  <windows source-height='30'>
+    <window class='worksheet' maximized='true' name='Tabular Viz'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+            <card type='measures' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card mode='slider' param='[Parameters].[Churn Parameter]' type='parameter' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.1pb1t4k1ys3y4c18uniri1nli11r].[none:Phone:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+    </window>
+    <window class='worksheet' name='Odds'>
+      <cards>
+        <edge name='left'>
+          <strip size='141'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+            <card type='measures' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='136'>
+            <card param='[federated.1pb1t4k1ys3y4c18uniri1nli11r].[:Measure Names]' show-morefewerbutton='false' type='filter' />
+            <card param='[federated.1pb1t4k1ys3y4c18uniri1nli11r].[none:Eve Mins:qk]' show-domain='false' show-null-ctrls='false' type='filter' />
+            <card param='[federated.1pb1t4k1ys3y4c18uniri1nli11r].[none:Day Charge:qk]' show-domain='false' show-null-ctrls='false' type='filter' />
+            <card param='[federated.1pb1t4k1ys3y4c18uniri1nli11r].[none:Day Mins:qk]' show-domain='false' show-null-ctrls='false' type='filter' />
+            <card param='[federated.1pb1t4k1ys3y4c18uniri1nli11r].[none:CustServ Calls:qk]' show-domain='false' show-null-ctrls='false' type='filter' />
+          </strip>
+          <strip size='120'>
+            <card param='[federated.1pb1t4k1ys3y4c18uniri1nli11r].[none:Intl Calls:qk]' show-domain='false' show-null-ctrls='false' type='filter' />
+            <card param='[federated.1pb1t4k1ys3y4c18uniri1nli11r].[none:Int&apos;l Plan:qk]' show-domain='false' show-null-ctrls='false' type='filter' />
+            <card param='[federated.1pb1t4k1ys3y4c18uniri1nli11r].[none:Eve Charge:qk]' show-domain='false' show-null-ctrls='false' type='filter' />
+            <card param='[federated.1pb1t4k1ys3y4c18uniri1nli11r].[none:Eve Calls:qk]' show-domain='false' show-null-ctrls='false' type='filter' />
+            <card param='[federated.1pb1t4k1ys3y4c18uniri1nli11r].[none:Account Length:qk]' show-domain='false' show-null-ctrls='false' type='filter' />
+            <card mode='slider' param='[Parameters].[Churn Parameter]' type='parameter' />
+            <card param='[federated.1pb1t4k1ys3y4c18uniri1nli11r].[none:Day Calls:qk]' show-domain='false' show-null-ctrls='false' type='filter' />
+          </strip>
+          <strip size='126'>
+            <card param='[federated.1pb1t4k1ys3y4c18uniri1nli11r].[none:Intl Charge:qk]' show-domain='false' show-null-ctrls='false' type='filter' />
+            <card param='[federated.1pb1t4k1ys3y4c18uniri1nli11r].[none:Intl Mins:qk]' show-domain='false' show-null-ctrls='false' type='filter' />
+            <card param='[federated.1pb1t4k1ys3y4c18uniri1nli11r].[none:Night Calls:qk]' show-domain='false' show-null-ctrls='false' type='filter' />
+            <card param='[federated.1pb1t4k1ys3y4c18uniri1nli11r].[none:Night Charge:qk]' show-domain='false' show-null-ctrls='false' type='filter' />
+            <card param='[federated.1pb1t4k1ys3y4c18uniri1nli11r].[none:Night Mins:qk]' show-domain='false' show-null-ctrls='false' type='filter' />
+            <card param='[federated.1pb1t4k1ys3y4c18uniri1nli11r].[none:VMail Message:qk]' show-domain='false' show-null-ctrls='false' type='filter' />
+            <card param='[federated.1pb1t4k1ys3y4c18uniri1nli11r].[none:VMail Plan:qk]' show-domain='false' show-null-ctrls='false' type='filter' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.1pb1t4k1ys3y4c18uniri1nli11r].[:Measure Names]</field>
+            <field>[federated.1pb1t4k1ys3y4c18uniri1nli11r].[none:Account Length:qk]</field>
+            <field>[federated.1pb1t4k1ys3y4c18uniri1nli11r].[none:Churn:qk]</field>
+            <field>[federated.1pb1t4k1ys3y4c18uniri1nli11r].[none:CustServ Calls:qk]</field>
+            <field>[federated.1pb1t4k1ys3y4c18uniri1nli11r].[none:Day Calls:qk]</field>
+            <field>[federated.1pb1t4k1ys3y4c18uniri1nli11r].[none:Day Charge:qk]</field>
+            <field>[federated.1pb1t4k1ys3y4c18uniri1nli11r].[none:Day Mins:qk]</field>
+            <field>[federated.1pb1t4k1ys3y4c18uniri1nli11r].[none:Eve Calls:qk]</field>
+            <field>[federated.1pb1t4k1ys3y4c18uniri1nli11r].[none:Eve Charge:qk]</field>
+            <field>[federated.1pb1t4k1ys3y4c18uniri1nli11r].[none:Eve Mins:qk]</field>
+            <field>[federated.1pb1t4k1ys3y4c18uniri1nli11r].[none:Int&apos;l Plan:qk]</field>
+            <field>[federated.1pb1t4k1ys3y4c18uniri1nli11r].[none:Intl Calls:qk]</field>
+            <field>[federated.1pb1t4k1ys3y4c18uniri1nli11r].[none:Intl Charge:qk]</field>
+            <field>[federated.1pb1t4k1ys3y4c18uniri1nli11r].[none:Intl Mins:qk]</field>
+            <field>[federated.1pb1t4k1ys3y4c18uniri1nli11r].[none:Night Calls:qk]</field>
+            <field>[federated.1pb1t4k1ys3y4c18uniri1nli11r].[none:Night Charge:qk]</field>
+            <field>[federated.1pb1t4k1ys3y4c18uniri1nli11r].[none:Night Mins:qk]</field>
+            <field>[federated.1pb1t4k1ys3y4c18uniri1nli11r].[none:VMail Message:qk]</field>
+            <field>[federated.1pb1t4k1ys3y4c18uniri1nli11r].[none:VMail Plan:qk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='192' name='Odds' width='192'>
+      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
+      AABJRU5ErkJggg==
+    </thumbnail>
+    <thumbnail height='192' name='Tabular Viz' width='192'>
+      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
+    </thumbnail>
+  </thumbnails>
+</workbook>
